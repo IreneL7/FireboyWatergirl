@@ -1,4 +1,4 @@
-# FireboyWatergirl
+# About
 
 A Fireboy & Watergirl inspired platform game created by Irene, Claire, Rachel, and Kaitlyn.
 
