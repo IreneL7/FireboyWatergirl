@@ -9,56 +9,56 @@ let collisionBlocks
 let background
 let doors
 const player = new Player({
-    imageSrc: './img/king/idle.png',
+    imageSrc: './img/frog.png',
     frameRate: 11,
-    animations: {
-        idleRight: {
-            frameRate: 11,
-            frameBuffer: 2,
-            loop: true,
-            imageSrc: './img/king/idle.png',
-        },
-        idleLeft: {
-            frameRate: 11,
-            frameBuffer: 2,
-            loop: true,
-            imageSrc: './img/king/idleLeft.png',
-        },
-        runRight: {
-            frameRate: 8,
-            frameBuffer: 4,
-            loop: true,
-            imageSrc: './img/king/runRight.png',
-        },
-        runLeft: {
-            frameRate: 8,
-            frameBuffer: 4,
-            loop: true,
-            imageSrc: './img/king/runLeft.png',
-        },
-        enterDoor: {
-            frameRate: 8,
-            frameBuffer: 4,
-            loop: false,
-            imageSrc: './img/king/enterDoor.png',
-            onComplete: () => {
-                gsap.to(overlay, {
-                    opacity: 1,
-                    onComplete: () => {
-                        level++
-                        if (level === 4) level = 1
-                        levels[level].init()
-                        player.switchSprite('idleRight')
-                        player.preventInput = false
-                        gsap.to(overlay, {
-                            opacity: 0
-                        })
-                    },
-                })
-            },
-        },
-    }
-})
+//     animations: {
+//         idleRight: {
+//             frameRate: 11,
+//             frameBuffer: 2,
+//             loop: true,
+//             imageSrc: './img/frog.png',
+//         },
+//         idleLeft: {
+//             frameRate: 11,
+//             frameBuffer: 2,
+//             loop: true,
+//             imageSrc: './img/frog.png',
+//         },
+//         runRight: {
+//             frameRate: 8,
+//             frameBuffer: 4,
+//             loop: true,
+//             imageSrc: './img/frog.png,
+//         },
+//         runLeft: {
+//             frameRate: 8,
+//             frameBuffer: 4,
+//             loop: true,
+//             imageSrc: './img/frog.png',
+//         },
+//         enterDoor: {
+//             frameRate: 8,
+//             frameBuffer: 4,
+//             loop: false,
+//             imageSrc: './img/frog.png',
+//             onComplete: () => {
+//                 gsap.to(overlay, {
+//                     opacity: 1,
+//                     onComplete: () => {
+//                         level++
+//                         if (level === 4) level = 1
+//                         levels[level].init()
+//                         player.switchSprite('idleRight')
+//                         player.preventInput = false
+//                         gsap.to(overlay, {
+//                             opacity: 0
+//                         })
+//                     },
+//                 })
+//             },
+//         },
+//     }
+// })
 
 let level = 1
 let levels = {
