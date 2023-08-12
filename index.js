@@ -9,38 +9,38 @@ let collisionBlocks
 let background
 let doors
 const player = new Player({
-    imageSrc: './img/king/idle.png',
+    imageSrc: './img/idlefrog.png',
     frameRate: 11,
     animations: {
         idleRight: {
             frameRate: 11,
             frameBuffer: 2,
             loop: true,
-            imageSrc: './img/king/idle.png',
+            imageSrc: './img/idlefrog.png',
         },
         idleLeft: {
             frameRate: 11,
             frameBuffer: 2,
             loop: true,
-            imageSrc: './img/king/idleLeft.png',
+            imageSrc: './img/idlefrog.png',
         },
         runRight: {
-            frameRate: 8,
+            frameRate: 11,
             frameBuffer: 4,
             loop: true,
-            imageSrc: './img/king/runRight.png',
+            imageSrc: './img/jumpfrog.png',
         },
         runLeft: {
-            frameRate: 8,
-            frameBuffer: 4,
+            frameRate: 11,
+            frameBuffer: 2,
             loop: true,
-            imageSrc: './img/king/runLeft.png',
+            imageSrc: './img/jumpfrog.png',
         },
         enterDoor: {
-            frameRate: 8,
+            frameRate: 11,
             frameBuffer: 4,
             loop: false,
-            imageSrc: './img/king/enterDoor.png',
+            imageSrc: './img/jumpfrog.png',
             onComplete: () => {
                 gsap.to(overlay, {
                     opacity: 1,
