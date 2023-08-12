@@ -9,56 +9,56 @@ let collisionBlocks
 let background
 let doors
 const player = new Player({
-    imageSrc: './img/frog.png',
+    imageSrc: './img/idlefrog.png',
     frameRate: 11,
-//     animations: {
-//         idleRight: {
-//             frameRate: 11,
-//             frameBuffer: 2,
-//             loop: true,
-//             imageSrc: './img/frog.png',
-//         },
-//         idleLeft: {
-//             frameRate: 11,
-//             frameBuffer: 2,
-//             loop: true,
-//             imageSrc: './img/frog.png',
-//         },
-//         runRight: {
-//             frameRate: 8,
-//             frameBuffer: 4,
-//             loop: true,
-//             imageSrc: './img/frog.png,
-//         },
-//         runLeft: {
-//             frameRate: 8,
-//             frameBuffer: 4,
-//             loop: true,
-//             imageSrc: './img/frog.png',
-//         },
-//         enterDoor: {
-//             frameRate: 8,
-//             frameBuffer: 4,
-//             loop: false,
-//             imageSrc: './img/frog.png',
-//             onComplete: () => {
-//                 gsap.to(overlay, {
-//                     opacity: 1,
-//                     onComplete: () => {
-//                         level++
-//                         if (level === 4) level = 1
-//                         levels[level].init()
-//                         player.switchSprite('idleRight')
-//                         player.preventInput = false
-//                         gsap.to(overlay, {
-//                             opacity: 0
-//                         })
-//                     },
-//                 })
-//             },
-//         },
-//     }
-// })
+    animations: {
+        idleRight: {
+            frameRate: 11,
+            frameBuffer: 2,
+            loop: true,
+            imageSrc: './img/idlefrog.png',
+        },
+        idleLeft: {
+            frameRate: 11,
+            frameBuffer: 2,
+            loop: true,
+            imageSrc: './img/idlefrog.png',
+        },
+        runRight: {
+            frameRate: 11,
+            frameBuffer: 4,
+            loop: true,
+            imageSrc: './img/jumpfrog.png',
+        },
+        runLeft: {
+            frameRate: 11,
+            frameBuffer: 2,
+            loop: true,
+            imageSrc: './img/jumpfrog.png',
+        },
+        enterDoor: {
+            frameRate: 11,
+            frameBuffer: 4,
+            loop: false,
+            imageSrc: './img/jumpfrog.png',
+            onComplete: () => {
+                gsap.to(overlay, {
+                    opacity: 1,
+                    onComplete: () => {
+                        level++
+                        if (level === 4) level = 1
+                        levels[level].init()
+                        player.switchSprite('idleRight')
+                        player.preventInput = false
+                        gsap.to(overlay, {
+                            opacity: 0
+                        })
+                    },
+                })
+            },
+        },
+    }
+})
 
 let level = 1
 let levels = {
