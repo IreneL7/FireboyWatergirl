@@ -5,10 +5,10 @@
 <div align="center">
   <a href="https://github.com/IreneL7/FireboyWatergirl"></a>
 
-<h3 align="center">FireboyWatergirl</h3>
+<h3 align="center">Froggy & Ducky</h3>
 
   <p align="center">
-    A Fireboy & Watergirl inspired platform game created by Irene, Claire, Rachel, and Kaitlyn.
+    Froggy & Ducky is a Fireboy & Watergirl inspired platform game created by Irene, Claire, Rachel, and Kaitlyn.
     <br />
   </p>
 </div>
@@ -38,7 +38,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-We developed this game as our final project for the Technica Fellowship program. We took inspiration from the platform-style game, Fireboy & Watergirl, and chose to create a similarly structured game with Technica themed graphics. We hope you enjoy playing!
+We developed Froggy & Ducky as our final project for the Technica Fellowship program. We took inspiration from the platform-style game, Fireboy & Watergirl, and chose to create a similarly structured game with Technica themed graphics. We hope you enjoy playing!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
