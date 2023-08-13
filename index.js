@@ -26,21 +26,21 @@ const player = new Player({
         },
         runRight: {
             frameRate: 11,
-            frameBuffer: 4,
+            frameBuffer: 2,
             loop: true,
-            imageSrc: './img/jumpfrog.png',
+            imageSrc: './img/idlefrog.png',
         },
         runLeft: {
             frameRate: 11,
             frameBuffer: 2,
             loop: true,
-            imageSrc: './img/jumpfrog.png',
+            imageSrc: './img/idlefrog.png',
         },
         enterDoor: {
             frameRate: 11,
             frameBuffer: 4,
             loop: false,
-            imageSrc: './img/jumpfrog.png',
+            imageSrc: './img/idlefrog.png',
             onComplete: () => {
                 gsap.to(overlay, {
                     opacity: 1,
