@@ -1,7 +1,7 @@
 Array.prototype.parse2D = function () {
     const rows = []
-    for (let i = 0; i < this.length; i += 16) {
-        rows.push(this.slice(i, i + 16))
+    for (let i = 0; i < this.length; i += 330) {
+        rows.push(this.slice(i, i + 330))
     }
     return rows
 }
@@ -10,11 +10,11 @@ Array.prototype.createObjectsFrom2D = function () {
     const objects = []
     this.forEach((row, y) => {
         row.forEach((symbol, x) => {
-            if (symbol === 210 || symbol === 212 || symbol === 178) {
+            if (symbol === 23 || symbol === 212 || symbol === 178) {
                 objects.push(new CollisionBlock({
                     position: {
-                        x: x * 64,
-                        y: y * 64,
+                        x: x * 3,
+                        y: y * 3,
                     },
                 }))
             }
