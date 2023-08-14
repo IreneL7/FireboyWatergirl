@@ -9,9 +9,13 @@ let collisionBlocks
 let background
 let doors
 
-/*const player = new Player({
+const player = new Player({
     imageSrc: './img/idlefrog.png',
     frameRate: 11,
+    position: {
+        x: 70,
+        y: 420,
+    },
     animations: {
         idleRight: {
             frameRate: 11,
@@ -59,37 +63,37 @@ let doors
             },
         },
     }
-})*/
+})
 
-const player = new Player({
+const player2 = new Player({
     imageSrc: './img/idleduck.png',
     frameRate: 11,
     position: {
         x: 100,
-        y: 200,
+        y: 0,
     },
     animations: {
         idleRight: {
             frameRate: 11,
-            frameBuffer: 2,
+            frameBuffer: 4,
             loop: true,
             imageSrc: './img/idleduck.png',
         },
         idleLeft: {
             frameRate: 11,
-            frameBuffer: 2,
+            frameBuffer: 3,
             loop: true,
             imageSrc: './img/idleduck.png',
         },
         runRight: {
             frameRate: 11,
-            frameBuffer: 2,
+            frameBuffer: 3,
             loop: true,
             imageSrc: './img/duckright.png',
         },
         runLeft: {
             frameRate: 11,
-            frameBuffer: 2,
+            frameBuffer: 3,
             loop: true,
             imageSrc: './img/duckleft.png',
         },
@@ -125,8 +129,10 @@ let levels = {
             parsedCollisions = collisionsLevel1.parse2D()
             collisionBlocks = parsedCollisions.createObjectsFrom2D()
             player.collisionBlocks = collisionBlocks
+            player2.collisionBlocks = collisionBlocks
 
             if (player.currentAnimation) player.currentAnimation.isActive = false
+            if (player2.currentAnimation) player2.currentAnimation.isActive = false
 
             background = new Sprite({
                 position: {
@@ -226,6 +232,15 @@ const keys = {
     d: {
         pressed: false,
     },
+    ArrowUp: {
+        pressed: false,
+    },
+    ArrowLeft: {
+        pressed: false,
+    },
+    ArrowRight: {
+        pressed: false,
+    },
 }
 
 const overlay = {
@@ -247,6 +262,10 @@ function animate() {
     player.handleInput(keys)
     player.draw()
     player.update()
+
+    player2.handleInputDuck(keys)
+    player2.draw()
+    player2.update()
 
     c.save()
     c.globalAlpha = overlay.opacity

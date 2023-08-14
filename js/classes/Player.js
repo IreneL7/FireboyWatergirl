@@ -1,11 +1,10 @@
 class Player extends Sprite {
-    constructor({ collisionBlocks = [], imageSrc, frameRate, animations, loop}) {
-        super({imageSrc, frameRate, animations, loop
-        })
-        this.position = {
+    constructor({ collisionBlocks = [], imageSrc, frameRate, animations, loop, position}) {
+        super({imageSrc, frameRate, animations, loop, position})
+        /*this.position = {
             x: 100,
             y: 0,
-        }
+        }*/
 
         this.velocity = {
             x: 0,
@@ -41,6 +40,23 @@ class Player extends Sprite {
             this.velocity.x = 5
             this.lastDirection = 'right'
         } else if (keys.a.pressed) {
+            this.switchSprite('runLeft')
+            this.velocity.x = -5
+            this.lastDirection = 'left'
+        } else {
+            if (this.lastDirection === 'left') this.switchSprite('idleLeft')
+            else this.switchSprite('idleRight')
+        }
+    }
+
+    handleInputDuck(keys) {
+        if (this.preventInput) return
+        this.velocity.x = 0
+        if (keys.ArrowRight.pressed) {
+            this.switchSprite('runRight')
+            this.velocity.x = 5
+            this.lastDirection = 'right'
+        } else if (keys.ArrowLeft.pressed) {
             this.switchSprite('runLeft')
             this.velocity.x = -5
             this.lastDirection = 'left'
