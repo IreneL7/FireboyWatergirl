@@ -76,7 +76,7 @@ let levels = {
                     x: 0,
                     y: 0,
                 },
-                imageSrc: './img/backgroundLevel1.png',
+                imageSrc: './img/FireboyWatergirlBg.png',
             })
             doors = [
                 new Sprite({
