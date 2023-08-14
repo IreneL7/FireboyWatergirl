@@ -64,6 +64,10 @@ let doors
 const player = new Player({
     imageSrc: './img/idleduck.png',
     frameRate: 11,
+    position: {
+        x: 100,
+        y: 200,
+    },
     animations: {
         idleRight: {
             frameRate: 11,
