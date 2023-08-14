@@ -3,7 +3,7 @@ class Player extends Sprite {
         super({imageSrc, frameRate, animations, loop
         })
         this.position = {
-            x: 0,
+            x: 100,
             y: 0,
         }
 
