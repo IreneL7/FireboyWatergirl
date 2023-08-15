@@ -21,25 +21,25 @@ const player = new Player({
     animations: {
         idleRight: {
             frameRate: 11,
-            frameBuffer: 2,
+            frameBuffer: 4,
             loop: true,
             imageSrc: './img/idlefrog.png',
         },
         idleLeft: {
             frameRate: 11,
-            frameBuffer: 2,
+            frameBuffer: 3,
             loop: true,
             imageSrc: './img/idlefrog.png',
         },
         runRight: {
             frameRate: 11,
-            frameBuffer: 4,
+            frameBuffer: 3,
             loop: true,
             imageSrc: './img/idlefrog.png',
         },
         runLeft: {
             frameRate: 11,
-            frameBuffer: 2,
+            frameBuffer: 3,
             loop: true,
             imageSrc: './img/idlefrog.png',
         },
