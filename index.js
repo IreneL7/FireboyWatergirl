@@ -4,8 +4,10 @@ const c = canvas.getContext('2d')
 canvas.width = 1024
 canvas.height = 576
 
-let parsedCollisions
+let parsedCollision
+let parsedDeathCollisions
 let collisionBlocks
+let deathCollisionBlocks
 let background
 let doors
 
@@ -232,14 +234,24 @@ const overlay = {
     opacity: 0,
 }
 
+//temporary lines of code below
+parsedDeathCollisions = deathCollisions.parse2D()
+deathCollisionBlocks = parsedDeathCollisions.createObjectsFrom2D()
+//delete above later
+
 function animate() {
     window.requestAnimationFrame(animate)
     
     background.draw()
-    /*collisionBlocks.forEach(collisionBlock => {
+    // Code below was commented out but I uncommented to show collision blocks
+    collisionBlocks.forEach(collisionBlock => {
         collisionBlock.draw()
-    })*/
+    })
 
+    deathCollisionBlocks.forEach(collisionBlock => {
+        collisionBlock.draw()
+    })
+    // Changes end here
     doors.forEach((door) => {
         door.draw()
     })
