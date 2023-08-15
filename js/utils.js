@@ -6,6 +6,7 @@ Array.prototype.parse2D = function () {
     return rows
 }
 
+
 Array.prototype.createObjectsFrom2D = function () {
     const objects = []
     this.forEach((row, y) => {
