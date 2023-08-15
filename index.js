@@ -18,6 +18,10 @@ const player = new Player({
         x: 70,
         y: 420,
     },
+    spawn: {
+        x: 70,
+        y: 420,
+    },
     animations: {
         idleRight: {
             frameRate: 11,
@@ -71,6 +75,10 @@ const player2 = new Player({
     imageSrc: './img/idleduck.png',
     frameRate: 11,
     position: {
+        x: 100,
+        y: 0,
+    },
+    spawn: {
         x: 100,
         y: 0,
     },
@@ -129,9 +137,13 @@ let levels = {
     1: {
         init: () => {
             parsedCollisions = collisionsLevel1.parse2D()
+            parsedDeathCollisions = deathCollisions.parse2D()
             collisionBlocks = parsedCollisions.createObjectsFrom2D()
+            deathCollisionBlocks = parsedDeathCollisions.createObjectsFrom2D()
             player.collisionBlocks = collisionBlocks
             player2.collisionBlocks = collisionBlocks
+            player.deathCollisionBlocks = deathCollisionBlocks
+            player2.deathCollisionBlocks = deathCollisionBlocks
 
             if (player.currentAnimation) player.currentAnimation.isActive = false
             if (player2.currentAnimation) player2.currentAnimation.isActive = false
@@ -219,6 +231,7 @@ let levels = {
                     loop: false,
                     autoplay: false,
                 }),
+                
             ]
         }
     }
@@ -249,10 +262,10 @@ const overlay = {
     opacity: 0,
 }
 
-//temporary lines of code below
+/*temporary lines of code below
 parsedDeathCollisions = deathCollisions.parse2D()
 deathCollisionBlocks = parsedDeathCollisions.createObjectsFrom2D()
-//delete above later
+delete above later*/
 
 function animate() {
     window.requestAnimationFrame(animate)
