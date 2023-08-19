@@ -28,14 +28,14 @@ class Player extends Sprite {
 
         this.checkForHorizontalCollisions()
         // checks for death collision
-        this.checkForHorizontalDeath()
+        // this.checkForHorizontalDeath()
         this.applyGravity()
         
         this.updateHitbox() 
 
         this.checkForVerticalCollisions()
         // checks for death collision
-        this.checkForVerticalDeath()
+        // this.checkForVerticalDeath()
     }
 
     handleInput(keys) {

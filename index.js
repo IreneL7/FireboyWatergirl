@@ -272,14 +272,15 @@ function animate() {
     
     background.draw()
     // Code below was commented out but I uncommented to show collision blocks
-    /*collisionBlocks.forEach(collisionBlock => {
+    collisionBlocks.forEach(collisionBlock => {
         collisionBlock.draw()
     })
 
     deathCollisionBlocks.forEach(collisionBlock => {
         collisionBlock.draw()
     })
-    // Changes end here
+    */ 
+   // Changes end here
     doors.forEach((door) => {
         door.draw()
     })*/
