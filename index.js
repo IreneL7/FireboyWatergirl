@@ -272,7 +272,7 @@ function animate() {
     
     background.draw()
     // Code below was commented out but I uncommented to show collision blocks
-    collisionBlocks.forEach(collisionBlock => {
+    /*collisionBlocks.forEach(collisionBlock => {
         collisionBlock.draw()
     })
 
@@ -282,7 +282,7 @@ function animate() {
     // Changes end here
     doors.forEach((door) => {
         door.draw()
-    })
+    })*/
     
     player.handleInput(keys)
     player.draw()
